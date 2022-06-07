@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : ICollectable
+public class Cube : CollectableBase
 {
-    public void Collect(Collector collector)
-    {
-        throw new System.NotImplementedException();
-    }
 
+    public override void Collect(Collector collector)
+    {
+        base.Collect(collector);
+        collector.GetComponent<CubeStackControl>().AddStack();
+        //Destroy(gameObject);
+        Debug.Log("sdfsdf");
+    }
     //private void OnTriggerEnter(Collider other)
     //{
     //    PoolingSystem.Instance.InstantiateAPS("cube", transform.position);
