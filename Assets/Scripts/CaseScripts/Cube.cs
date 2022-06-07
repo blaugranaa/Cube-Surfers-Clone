@@ -8,7 +8,7 @@ public class Cube : CollectableBase
     public override void Collect(Collector collector)
     {
         base.Collect(collector);
-        collector.GetComponent<CubeStackControl>().AddStack();
+        collector.transform.root.GetComponentInChildren<CubeStackControl>().AddStack();
         //Destroy(gameObject);
         Debug.Log("sdfsdf");
     }
