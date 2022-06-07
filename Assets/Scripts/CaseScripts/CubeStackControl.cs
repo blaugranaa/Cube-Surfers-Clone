@@ -8,17 +8,15 @@ public class CubeStackControl : MonoBehaviour
     GameObject cube;
     bool isOnce = true;
 
-    float previousFireRate;
     public int stackCount = 1;
 
-
+    List<GameObject> Pink = new List<GameObject>();
+    List<GameObject> Blue = new List<GameObject>();
 
     public void AddStack( GameObject obj)
     {
-        //cube = Instantiate(CubePrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         obj.transform.parent = transform;
         obj.transform.localPosition =Vector3.zero;
-
 
 
         for (int i = 0; i < transform.childCount; i++)
@@ -27,7 +25,6 @@ public class CubeStackControl : MonoBehaviour
             {
                 transform.GetChild(i).transform.localPosition += new Vector3(0, 0.06f, 0);
 
-                Debug.Log("name"+ transform.GetChild(i).name);
                 isOnce = false;
             }
             else

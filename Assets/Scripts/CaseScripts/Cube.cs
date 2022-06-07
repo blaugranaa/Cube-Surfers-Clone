@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cube : CollectableBase
 {
     public bool isCollected;
+    public string f;
     public override void Collect(Collector collector)
     {
         base.Collect(collector);
