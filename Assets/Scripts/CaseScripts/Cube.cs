@@ -10,10 +10,9 @@ public class Cube : CollectableBase
         base.Collect(collector);
         if (!isCollected)
         {
+            isCollected = true;
             collector.transform.root.GetComponent<CubeStackControl>().AddStack(gameObject);
             //Destroy(gameObject);
-            isCollected = true;
-            Debug.Log("sdfsdf");
         }
        
     }
