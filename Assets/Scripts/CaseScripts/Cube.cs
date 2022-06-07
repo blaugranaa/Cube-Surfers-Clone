@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : MonoBehaviour
+public class Cube : ICollectable
 {
-
-    private void OnTriggerEnter(Collider other)
+    public void Collect(Collector collector)
     {
-        PoolingSystem.Instance.InstantiateAPS("cube", transform.position);
+        throw new System.NotImplementedException();
     }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    PoolingSystem.Instance.InstantiateAPS("cube", transform.position);
+    //}
 }
