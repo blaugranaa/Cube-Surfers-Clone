@@ -7,7 +7,6 @@ public class CollectableGenerator : MonoBehaviour
     public float DistanceBetweenCollectables = 0.5f;
     public List<float> XPositions = new List<float>();
     public List<float> ZPos = new List<float>();
-    public GameObject cube;
     List<GameObject> allExCubes = new List<GameObject>();
     public List<GameObject> allCubes = new List<GameObject>();
     public bool isFirstEnvironment;
@@ -38,7 +37,7 @@ public class CollectableGenerator : MonoBehaviour
     {
         DeleteExCollectables();
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
         GenerateCollectables(isStarted);
     }
 

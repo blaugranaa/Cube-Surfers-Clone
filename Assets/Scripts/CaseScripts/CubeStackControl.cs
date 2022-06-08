@@ -14,7 +14,7 @@ public class CubeStackControl : MonoBehaviour
     List<GameObject> Red = new List<GameObject>();
 
 
-    public int stackCount = 1;
+    int stackCount = 0;
 
     bool isBlue, isGreen, isPurple, isRed, isYellow;
 
@@ -38,7 +38,7 @@ public class CubeStackControl : MonoBehaviour
                 transform.GetChild(i).transform.localPosition = new Vector3(0, 0.04f * (transform.childCount - transform.GetChild(i).GetSiblingIndex() - 1), 0);
             }
         }
-
+        IncreaseStackCount();
     }
 
     void Greet(GameObject obj)
@@ -125,7 +125,7 @@ public class CubeStackControl : MonoBehaviour
     }
     public void DeleteStack()
     {
-    
+        DecreaseStackCount();
         int DestroyedCubes = 5;
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -147,13 +147,17 @@ public class CubeStackControl : MonoBehaviour
     {
         stackCount++;
         Debug.Log(stackCount);
+        GetComponentInChildren<Animator>().SetBool("isFloating", true);
+
     }
 
     public void DecreaseStackCount()
     {
-        stackCount--;
-        Debug.Log(stackCount);
-
+        stackCount-=5;
+        if (stackCount==0)
+        {
+            GetComponentInChildren<Animator>().SetBool("isFloating", false);
+        }
 
     }
 
