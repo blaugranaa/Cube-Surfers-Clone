@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5505070481754633332}
   - component: {fileID: 6982834367859854087}
   - component: {fileID: 6982834367859854080}
-  - component: {fileID: 6982834367859854081}
   - component: {fileID: 6982834367859854082}
   m_Layer: 9
   m_Name: cubeBlue
@@ -112,18 +111,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6982834367859854081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6297452983761671585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b067e40872a084bba155df33045218, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6982834367859854082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,4 +125,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollectEffectPrefab: {fileID: 0}
   isCollected: 0
-  f: 
+  colorValue: 1

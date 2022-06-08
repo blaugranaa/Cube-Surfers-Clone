@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 380210858}
   - component: {fileID: 380210859}
   - component: {fileID: 380210860}
+  - component: {fileID: 380210861}
   m_Layer: 0
   m_Name: ParentObject
   m_TagString: Untagged
@@ -400,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380210856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.02, z: 7.914}
+  m_LocalPosition: {x: 0, y: 0, z: 7.914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 283193557}
@@ -433,8 +434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8125b84b211644f439d2ad51f5ff1ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubePrefab: {fileID: 7783110424708036775, guid: 438acb68f89712e46a9be16f59c8a58f,
-    type: 3}
   stackCount: 1
 --- !u!114 &380210860
 MonoBehaviour:
@@ -459,6 +458,18 @@ MonoBehaviour:
   damping: -1
   inertia: 0
   remainingTranslation: {x: 0, y: 0, z: 0}
+--- !u!114 &380210861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380210856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420c15c2a86db554097930e5f10b26a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &419526711
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8906490152660168589, guid: e798346a6a095fc46875bedc0f45cdec,
+        type: 3}
+      propertyPath: isFirstEnvironment
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e798346a6a095fc46875bedc0f45cdec, type: 3}
 --- !u!1 &760522478 stripped
@@ -743,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 2587893111618036323, guid: f2963b2264f264b4982e0f9181c5c175,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2587893111618036323, guid: f2963b2264f264b4982e0f9181c5c175,
         type: 3}
@@ -814,6 +830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: character
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927862843872917721, guid: f2963b2264f264b4982e0f9181c5c175,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2963b2264f264b4982e0f9181c5c175, type: 3}
@@ -1168,6 +1189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8906490152660168589, guid: e798346a6a095fc46875bedc0f45cdec,
+        type: 3}
+      propertyPath: isFirstEnvironment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e798346a6a095fc46875bedc0f45cdec, type: 3}
 --- !u!1 &1591770561 stripped
@@ -1384,6 +1410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906490152660168589, guid: e798346a6a095fc46875bedc0f45cdec,
+        type: 3}
+      propertyPath: isFirstEnvironment
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e798346a6a095fc46875bedc0f45cdec, type: 3}

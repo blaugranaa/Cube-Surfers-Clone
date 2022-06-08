@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 878396526471565360}
   - component: {fileID: 878396526471565361}
   - component: {fileID: 878396526471565362}
-  - component: {fileID: 878396526471565359}
   m_Layer: 9
   m_Name: cubeGreen (2)
   m_TagString: Untagged
@@ -126,16 +125,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollectEffectPrefab: {fileID: 0}
   isCollected: 0
-  f: 
---- !u!114 &878396526471565359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7422360109785244963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b067e40872a084bba155df33045218, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  colorValue: 2

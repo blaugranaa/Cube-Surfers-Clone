@@ -10,48 +10,46 @@ public class CollectableGenerator : MonoBehaviour
     public GameObject cube;
     List<GameObject> allExCubes = new List<GameObject>();
     public List<GameObject> allCubes = new List<GameObject>();
-
+    public bool isFirstEnvironment;
     
 
 
     private void Start()
     {
-        GenerateCollectables();
+            StartCoroutine(GenerateCo(true));
     }
 
-    public void GenerateCollectables()
+    public void GenerateCollectables(bool isStarted)
     {
-        DeleteExCollectables();
+        
         for (float i = -2; i <= 42 ; i+=0.5f)
         {
             int randomXPos = Random.Range(0, 3);
             int randomCube = Random.Range(0, allCubes.Count);
-            //PoolingSystem.Instance.InstantiateAPS("cube" , new Vector3(XPositions[randomXPos], 0,i), Quaternion.identity, transform);
             GameObject obj = Instantiate(allCubes[randomCube], new Vector3(XPositions[randomXPos], 0, i), Quaternion.identity, transform);
 
             obj.transform.parent = transform;
             obj.transform.localPosition = new Vector3(XPositions[randomXPos], 0, i);
 
-
         }
+    }
+
+    public IEnumerator GenerateCo(bool isStarted)
+    {
+        DeleteExCollectables();
+
+        yield return new WaitForSeconds(1);
+        GenerateCollectables(isStarted);
     }
 
     void DeleteExCollectables()
     {
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 1; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).gameObject.layer ==9)
-            {
-                allExCubes.Add(transform.GetChild(i).gameObject);
-            }
-
-
+            Destroy(transform.GetChild(1).gameObject);
         }
 
-        for (int i = 0; i < allExCubes.Count; i++)
-        {
-            Destroy(allExCubes[0]);
-        }
+       
     }
 
 

@@ -13,14 +13,13 @@ public class EnvironmentGenerator : MonoBehaviour
 
     public void MoveEnvironment()
     {
-
         movedEnvironment = Environment[0];
         Environment.Remove(movedEnvironment);
         float newZ = Environment[Environment.Count - 1].transform.position.z + offset;
         movedEnvironment.transform.position = new Vector3(movedEnvironment.transform.position.x, 0, newZ);
         Environment.Add(movedEnvironment);
         collectableGenerator = movedEnvironment.GetComponent<CollectableGenerator>();
-        collectableGenerator.GenerateCollectables();
+        StartCoroutine(collectableGenerator.GenerateCo(false));
     }
 
  

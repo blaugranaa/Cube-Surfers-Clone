@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 552119143489671095}
   - component: {fileID: 552119143489671094}
   - component: {fileID: 552119143489671081}
-  - component: {fileID: 552119143489671092}
   m_Layer: 9
   m_Name: cubePurple (1)
   m_TagString: Untagged
@@ -126,16 +125,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollectEffectPrefab: {fileID: 0}
   isCollected: 0
-  f: 
---- !u!114 &552119143489671092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2447497597572453702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b067e40872a084bba155df33045218, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  colorValue: 3

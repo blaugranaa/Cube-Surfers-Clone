@@ -8,6 +8,13 @@ public class Collector : MonoBehaviour
         if (collectable != null)
         {
             collectable.Collect(this);
+            //Destroy(other.GetComponent<Collectable>());
+            other.GetComponentInChildren<Collectable>().enabled = false;
+            if (!other.gameObject.GetComponent<Collector>())
+            {
+                other.gameObject.AddComponent<Collector>();
+
+            }
         }
 
        
