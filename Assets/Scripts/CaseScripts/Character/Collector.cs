@@ -9,14 +9,9 @@ public class Collector : MonoBehaviour
         {
             collectable.Collect(this);
         }
+
+       
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        ICollectable collectable = collision.collider.GetComponentInChildren<ICollectable>();
-        if (collectable != null)
-        {
-            collectable.Collect(this);
-        }
-    }
+  
 }

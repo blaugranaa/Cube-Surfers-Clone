@@ -108,13 +108,14 @@ public class PoolingSystem : Singleton<PoolingSystem>
             return null;
     }
 
-    public GameObject InstantiateAPS(string iD, Vector3 position, Quaternion rotation)
+    public GameObject InstantiateAPS(string iD, Vector3 position, Quaternion rotation, Transform parent)
     {
         GameObject go = InstantiateAPS(iD);
         if (go)
         {
             go.transform.position = position;
             go.transform.rotation = rotation;
+            go.transform.parent = parent;
             return go;
         }
         else
